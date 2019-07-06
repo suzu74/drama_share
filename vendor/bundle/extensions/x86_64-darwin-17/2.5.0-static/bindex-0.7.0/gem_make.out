@@ -1,0 +1,15 @@
+current directory: /Users/suzukitomoaki/share_dvds/vendor/bundle/gems/bindex-0.7.0/ext/skiptrace
+/Users/suzukitomoaki/.rbenv/versions/2.5.1/bin/ruby -I /Users/suzukitomoaki/.rbenv/versions/2.5.1/lib/ruby/site_ruby/2.5.0 -r ./siteconf20190705-34897-1nibrnk.rb extconf.rb
+creating Makefile
+
+current directory: /Users/suzukitomoaki/share_dvds/vendor/bundle/gems/bindex-0.7.0/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /Users/suzukitomoaki/share_dvds/vendor/bundle/gems/bindex-0.7.0/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/cruby.bundle
+
+current directory: /Users/suzukitomoaki/share_dvds/vendor/bundle/gems/bindex-0.7.0/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20190705-34897-1lmlgp6/skiptrace
