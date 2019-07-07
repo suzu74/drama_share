@@ -1,8 +1,17 @@
 @import "bootstrap";
 /*@import "bootstrap-sprockets";*/
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
 
 body {
 	margin: 0;
+}
+
+.flash-msg {
+  margin-top: 60px;
 }
 
 header nav {
@@ -48,4 +57,43 @@ header nav {
   display: inline-block;
   margin: 0 auto;
 }
+
+/* forms */
+
+form {
+  margin: 0 auto;
+  width: 400px;
+}
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+    color: red;
+}
+
+/* signup */
+
+.signup {
+  h1 {
+    margin-top: 80px;
+  }
+}
+
 
