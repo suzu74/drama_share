@@ -1,5 +1,7 @@
- 
-<h1 class="text-center">
-  <%= gravatar_for @user %>
-  <%= @user.name %>
-</h1>
+<div class="user-profile text-center">
+  <p><%= gravatar_for @user %></p>
+  <h1>
+    <%= @user.name %><small class="text-muted">さん</small>
+  </h1>
+
+</div>
