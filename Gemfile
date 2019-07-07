@@ -66,3 +66,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap'
 gem 'jquery-rails', '4.3.1'
+gem "aws-sdk-s3", require: false

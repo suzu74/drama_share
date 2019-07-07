@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_one_attached :image
   attr_accessor :remember_token
   validates :name,  presence: true, length: { maximum: 60 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i

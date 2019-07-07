@@ -11,6 +11,9 @@
         <%= f.label :email, "メールアドレス" %>
         <%= f.email_field :email, class: 'form-control' %>
 
+        <%= f.label :image, "プロフィール画像(※登録しない場合はデフォルトの画像になります)" %>
+        <%= f.file_field :image, accept: 'image/jpeg,image/gif,image/png', class: 'form-control' %>
+
         <%= f.label :password, "パスワード（６文字以上）" %>
         <%= f.password_field :password, class: 'form-control' %>
 

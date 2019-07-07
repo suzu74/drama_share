@@ -1,7 +1,10 @@
 <div class="user-profile text-center">
-  <p><%= gravatar_for @user %></p>
+  <% if @user.image.attached? %> 
+    <p><%= image_tag @user.image, class: "profile-image" %></p>
+  <% else %>
+    <p><%= gravatar_for @user %></p>
+  <% end %>
   <h1>
     <%= @user.name %><small class="text-muted">さん</small>
   </h1>
-
 </div>
