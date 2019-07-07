@@ -1,0 +1,105 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand btn-top" href="#">K-drama-share</a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="ナビゲーションの切替">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#recommend">おすすめの3作品</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#about">Sign Up</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#about">Log In</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+<div class="top text-center flexiblebox">
+  <div class="flex-child">
+    <h1>Share Your Favorite</h1>
+    <p>あなたのお気に入りを共有しよう</p>
+    <%= link_to "早速登録！", '#', class: "btn btn-lg btn-primary mr-3" %>
+    <%= link_to "ログイン！", '#', class: "btn btn-lg btn-danger" %>
+  </div>
+</div>
+
+<section id="about" class="about text-center">
+  <h2>About us</h2>
+  <p>あなたのお気に入りの韓国ドラマを共有できるサイトです。<br>
+  たくさんあってどれを見ていいかわからない、、、。」
+  <br>
+  そんな方にお気に入りが見つかればと思い作りました。</p>
+
+  <div class="row step">
+    <div class="col-xs-12 col-sm-4">
+      <p class="fa-4x">① <i class="fas fa-user-plus text-primary"></i></p>
+      <p>まずは登録！<br>
+        メールアドレスなど基本的な情報を入力し登録するとこのアプリが使用できます。
+      </p>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <p class="fa-4x">② <i class="fas fa-tv text-danger"></i></p>
+      <p>好きなドラマを検索して登録！<br>
+        ドラマを検索して探し、そのあとおすすめポイントなど簡単にコメントを記入してください。
+      </p>
+    </div>
+    <div class="col-xs-12 col-sm-4 ">
+      <p class="fa-4x">③ <i class="fas fa-search text-primary"></i></p>
+      <p>他の人が投稿したおすすめのドラマも検索することができます！ぜひ新しいドラマを見つけてください。
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="recommend" class="recommend">
+  <div class="container text-center">
+    <h3>迷ったらこの３作品</h3>
+    <p>現地の人がおすすめする3作品</p>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4">
+        <div class="card img-thumbnail">
+          <img class="topPage_drama card-img-top" src="<%= asset_path "tokepi.jpg" %>">
+          <div class="card-body px-2 py-3">
+            <h5 class="card-title">トッケビ</h5>
+            <p class="card-text">ケーブルテレビで異例の最高視聴率20.5％を記録したほか、百想芸術大賞など主要アワードで計15冠獲得。韓国ドラマ史上、空前のブームを巻き起こした話題作</p>
+          </div><!-- /.card-body -->
+        </div><!-- /.card -->
+      </div><!-- /.col-sm-6.col-md-3 -->
+
+      <div class="col-xs-12 col-sm-4">
+        <div class="card img-thumbnail">
+          <img class="topPage_drama card-img-top" src="<%= asset_path "signal.jpg" %>">
+          <div class="card-body px-2 py-3">
+            <h5 class="card-title">シグナル</h5>
+            <p class="card-text">韓国のゴールデン・グローブ賞とも言われる“百想芸術大賞”を筆頭に2016年の各アワードで9冠を受賞した本作。未解決事件を追う刑事たちの熱い思いに心を撃ちぬかれた多くの視聴者が熱狂し、ケーブルテレビ史上歴代第３位の視聴率を獲得！</p>
+          </div><!-- /.card-body -->
+        </div><!-- /.card -->
+      </div>
+
+      <div class="col-xs-12 col-sm-4">
+        <div class="card img-thumbnail">
+          <img class="topPage_drama card-img-top" src="<%= asset_path "secret.jpg" %>">
+          <div class="card-body px-2 py-3">
+            <h5 class="card-title">秘密の森</h5>
+            <p class="card-text">2017年最高傑作と呼ばれる大ヒット犯罪スリラードラマ。2017年度ケーブル局最大の傑作ミステリーと称され話題となった。先の読めない展開からは目が離せないこと必至です。
+            </p>
+          </div><!-- /.card-body -->
+        </div><!-- /.card -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="text-center p-3">
+  <p>© 2019 K-drama-share All rights reserved. Made by Tomoaki Suzuki</p>
+</footer>

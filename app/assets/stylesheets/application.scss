@@ -1,0 +1,51 @@
+@import "bootstrap";
+/*@import "bootstrap-sprockets";*/
+
+body {
+	margin: 0;
+}
+
+header nav {
+  opacity: 0.8;
+}
+
+.top {
+  background: url(seoul.jpg) center center / cover no-repeat fixed;
+  opacity: 0.8;
+  min-height: 100vh;
+  h1, p {
+    color: #ffffff;
+  }
+}
+
+/*about*/
+
+.about {
+  padding: 30px;
+}
+
+.step {
+  margin: 30px;
+}
+
+/*recommend*/
+
+.recommend {
+  background: #eeeeee;
+  padding: 30px;
+}
+
+.flexiblebox {
+  display: flex;
+  align-items: center; /* 縦方向中央揃え */
+  justify-content: center; /* 横方向中央揃え */
+}
+
+.topPage_drama {
+  padding-top: 15px;
+  width: 200px;
+  height: 300px;
+  display: inline-block;
+  margin: 0 auto;
+}
+
