@@ -7,4 +7,8 @@
   <h1>
     <%= @user.name %><small class="text-muted">さん</small>
   </h1>
+  <% if current_user?(@user) %>
+    <%= link_to "退会する", @user, method: :delete,
+                                  data: { confirm: "本当に退会してもよろしいでしょうか?" } %>
+  <% end %>
 </div>
