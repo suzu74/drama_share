@@ -14,8 +14,15 @@ body {
   margin-top: 60px;
 }
 
+/*header*/
+
+
 header nav {
   opacity: 0.8;
+}
+
+.dropdown-menu {
+  margin-right: 30px;
 }
 
 .top {
@@ -120,6 +127,18 @@ input {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+}
+
+/* Users index */
+
+.users {
+  list-style: none;
+    h1 {
+      margin-top: 60px;
+    }
+    ul {
+      margin-top: 20px;
+    }
 }
 
 
