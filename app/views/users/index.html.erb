@@ -2,21 +2,8 @@
   <h1>全てのユーザー</h1>
 
   <%= paginate @users %>
-
   <div class="row">
-    <% @users.each do |user| %>
-      <div class="col-xs-12 col-sm-4 border">
-        <% if user.image.attached? %>
-          <%= image_tag user.image ,class: "profile-image pt-4" %>
-        <% else %>
-          <%= gravatar_for user, size: 150 %>
-        <% end %>
-        <h3>
-          <%= link_to user.name, user %>
-          <small class="text-muted">さん</small>
-        </h3>
-      </div>
-    <% end %>
+    <%= render @users %>
   </div>
   <%= paginate @users %>
 </div>
