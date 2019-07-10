@@ -69,3 +69,4 @@ gem 'jquery-rails', '4.3.1'
 gem "aws-sdk-s3", require: false
 gem 'ransack'
 gem 'kaminari'
+gem 'rakuten_web_service'

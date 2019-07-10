@@ -1,0 +1,20 @@
+<h1>これがいいよ</h1>
+
+
+
+<%= form_for(@drama, url: post_path) do |f| %>
+      
+<%= image_tag @item %>
+
+<%= f.label :title %>
+<%= f.text_field :title, class: 'form-control' %>
+
+
+<%= f.label :description %>
+<%= f.text_field :description, class: 'form-control' %>
+
+<%= f.hidden_field :image, value: @item %>
+
+
+<%= f.submit "登録する", class: "btn btn-primary" %>
+<% end %>

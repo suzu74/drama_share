@@ -1,0 +1,26 @@
+<div class="search text-center container">
+  <h1>まずはドラマ名で検索してください</h1>
+  <div class='content'>
+    <div id="search-box">
+      <%= form_tag('/search', method: :get) do %>
+          <%= text_field_tag :good, "",  id: "good_search", name: "keyword", placeholder: "キーワードを打ち込んでください", style: "width: 200px;"%><button title="検索" type="submit">検索</button>
+      <% end %>
+    </div>
+    <h2>検索結果</h2>
+  	<div class="row">
+  		<% if @items.present?  %>
+  			<% @items.each do |item| %>
+  				<div class="col-xs-4 border">
+  				  <h3><a href="<%= item['itemUrl'] %>"><img class="ig" src="<%= item['mediumImageUrl'] %>"></a></h3>
+
+  				  <%= form_for(item['mediumImageUrl'], method: :get, url: post_path) do  %>
+  				      <%= hidden_field_tag :title, item['largeImageUrl'] %>
+  				      <%= submit_tag '選ぶ', class: "btn btn-secondary" %>
+  					<% end %>	
+
+  				</div>
+  			<% end %>
+  			</div>
+  		<% end %>
+  	</div>
+</div>
