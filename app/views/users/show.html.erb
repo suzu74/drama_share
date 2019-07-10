@@ -11,4 +11,14 @@
     <%= link_to "退会する", @user, method: :delete,
                                   data: { confirm: "本当に退会してもよろしいでしょうか?" } %>
   <% end %>
+
+  <div class="col-md-12">
+    <% if @user.dramas.any? %>
+      <h3>紹介したドラマ (<%= @user.dramas.count %>)</h3>
+      <ol class="dramas">
+        <%= render @dramas %>
+      </ol>
+      <%= paginate @dramas %>
+    <% end %>
+  </div>
 </div>

@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :dramas, dependent: :destroy
   has_one_attached :image
   attr_accessor :remember_token
   validates :name,  presence: true, length: { maximum: 60 }
