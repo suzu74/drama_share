@@ -4,5 +4,9 @@
     <h5 class="card-title"><%= drama.title %></h5>
 
     <p class="card-text"><%= drama.description %></p>
+    <% if current_user?(drama.user) %>
+      <%= link_to "削除する", drama, method: :delete,
+                                       data: { confirm: "本当にこのドラマを削除しますか?" } %>
+    <% end %>
   </div>
 </div>

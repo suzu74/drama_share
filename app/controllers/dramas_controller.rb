@@ -1,5 +1,6 @@
 class DramasController < ApplicationController
   before_action :logged_in_user, only: [:create, :destroy]
+  before_action :correct_user,   only: :destroy
 
   def index
     @dramas = Drama.all.page(params[:page]).per(6)
@@ -7,19 +8,22 @@ class DramasController < ApplicationController
 
   def create
     @drama = current_user.dramas.build(drama_params)
-    if @user.save
-      flash[:success] = "ドラマが紹介されました!"
-      redirect_to root_url
+    if @drama.save
+      flash[:success] = 'ドラマを紹介しました！' 
+      redirect_to current_user
     else
-      render 'static_pages/home'
+      redirect_to search_path
     end
   end
 
   def destroy
+    @drama.destroy
+    flash[:success] = "ドラマを削除しました！"
+    redirect_to current_user
   end
 
   def search
-    if params[:keyword] 
+    if params[:keyword]
       @items = RakutenWebService::Books::DVD.search(title: params[:keyword]).first(10)
     else 
       render 'search'
@@ -31,20 +35,14 @@ class DramasController < ApplicationController
     @drama = Drama.new
   end
 
-  def create
-      @drama = current_user.dramas.build(drama_params)
-      if @drama.save
-      flash[:success] = 'ドラマを紹介しました！' 
-      redirect_to current_user
-
-    else
-      redirect_to search_path
-    end
-  end
-
   private
 
     def drama_params
       params.require(:drama).permit(:title, :description, :image)
+    end
+
+    def correct_user
+      @drama = current_user.dramas.find_by(id: params[:id])
+      redirect_to root_url if @drama.nil?
     end
 end
