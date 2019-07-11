@@ -70,3 +70,4 @@ gem "aws-sdk-s3", require: false
 gem 'ransack'
 gem 'kaminari'
 gem 'rakuten_web_service'
+gem 'rails-i18n'
