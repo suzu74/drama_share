@@ -9,7 +9,7 @@
       <%= @user.name %><small class="text-muted">さん</small>
     </h1>
     <% if current_user?(@user) %>
-      <p><%= link_to "ドラマを紹介する", search_path, class: "btn btn-secondary" %></p>
+      <p><%= link_to "ドラマを紹介する", search_path, class: "btn btn-primary" %></p>
     <% end %>
 
     <% if @user.dramas.any? %>
