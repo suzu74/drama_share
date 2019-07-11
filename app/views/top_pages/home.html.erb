@@ -2,8 +2,10 @@
   <div class="flex-child">
     <h1>Share Your Favorite</h1>
     <p>あなたのお気に入りを共有しよう</p>
-    <%= link_to "早速登録！", signup_path, class: "btn btn-lg btn-primary mr-3" %>
-    <%= link_to "ログイン！", login_path, class: "btn btn-lg btn-danger" %>
+    <% unless logged_in? %>
+      <%= link_to "早速登録！", signup_path, class: "btn btn-lg btn-primary mr-3" %>
+      <%= link_to "ログイン！", login_path, class: "btn btn-lg btn-danger" %>
+    <% end %>
   </div>
 </div>
 

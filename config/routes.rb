@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   get '/post',       to: "dramas#post"
   post '/post',      to: "dramas#create"
   resources :users
-  resources :dvds,   only: [:create, :destroy]
+  resources :dramas,   only: [:index, :create, :destroy]
 end

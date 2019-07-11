@@ -28,6 +28,10 @@
         <p><%= gravatar_for @user %></p>
       <% end %>
       <p><%= @user.name %>さん</p>
+      <% if current_user?(@user) %>
+        <%= link_to "退会する", @user, method: :delete,
+                                      data: { confirm: "本当に退会してもよろしいでしょうか?" }, class: "btn btn-danger" %>
+      <% end %>
 
     </div>
   </div>

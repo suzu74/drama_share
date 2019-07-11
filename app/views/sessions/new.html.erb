@@ -4,18 +4,18 @@
     <div class="col-md-12">
       <%= form_for(:session, url: login_path) do |f| %>
 
-        <%= f.label :email %>
+        <%= f.label :email, "メールアドレス" %>
         <%= f.email_field :email, class: 'form-control' %>
 
-        <%= f.label :password %>
+        <%= f.label :password, "パスワード" %>
         <%= f.password_field :password, class: 'form-control' %>
 
         <%= f.label :remember_me, class: "checkbox inline" do %>
           <%= f.check_box :remember_me %>
-          <span>Remember me on this computer</span>
+          <span>次回のログインをスキップする</span>
         <% end %>
 
-        <%= f.submit "Log in", class: "btn btn-primary" %>
+        <%= f.submit "ログインする！", class: "btn btn-primary" %>
       <% end %>
 
       <p>登録はまだですか? <%= link_to "登録ページへ", signup_path %></p>

@@ -1,6 +1,10 @@
 class DramasController < ApplicationController
   before_action :logged_in_user, only: [:create, :destroy]
 
+  def index
+    @dramas = Drama.all.page(params[:page]).per(6)
+  end
+
   def create
     @drama = current_user.dramas.build(drama_params)
     if @user.save
@@ -17,7 +21,8 @@ class DramasController < ApplicationController
   def search
     if params[:keyword] 
       @items = RakutenWebService::Books::DVD.search(title: params[:keyword]).first(10)
-      
+    else 
+      render 'search'
     end
   end
 
@@ -30,7 +35,7 @@ class DramasController < ApplicationController
       @drama = current_user.dramas.build(drama_params)
       if @drama.save
       flash[:success] = 'ドラマを紹介しました！' 
-      redirect_to root_path
+      redirect_to current_user
 
     else
       redirect_to search_path

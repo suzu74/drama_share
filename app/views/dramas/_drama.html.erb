@@ -1,10 +1,8 @@
-<li id="drama-<%= drama.id %>">
-  <%= link_to gravatar_for(drama.user, size: 50), drama.user %>
-  <span class="user"><%= link_to drama.user.name, drama.user %></span>
-  <span class="title"><%= drama.title %></span>
-  <p><%= image_tag drama.image %></p>
-  <span><%= drama.description %></span>
-  <span class="timestamp">
-    Posted <%= time_ago_in_words(drama.created_at) %> ago.
-  </span>
-</li>
+<div class="col-xs-12 col-sm-4" id="drama-<%= drama.id %>">
+  <div class="card img-thumbnail">
+    <%= image_tag drama.image, class: "topPage_drama card-img-top" %>
+    <h5 class="card-title"><%= drama.title %></h5>
+
+    <p class="card-text"><%= drama.description %></p>
+  </div>
+</div>

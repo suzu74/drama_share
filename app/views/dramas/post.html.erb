@@ -1,20 +1,21 @@
-<h1>これがいいよ</h1>
+<div class="container text-center search" >
+	<h3>以下の項目を入力してください</h3>
+	<div class="row">
+	  <div class="col-md-12">
+			<%= form_for(@drama, url: post_path) do |f| %>
+			      
+				<p><%= image_tag @item %></p>
 
+				<%= f.label :title, "ドラマのタイトル" %>
+				<%= f.text_field :title, class: 'form-control' %>
 
+				<%= f.label :description, "おすすめポイント" %>
+				<%= f.text_area :description, class: 'form-control' %>
 
-<%= form_for(@drama, url: post_path) do |f| %>
-      
-<%= image_tag @item %>
+				<%= f.hidden_field :image, value: @item %>
 
-<%= f.label :title %>
-<%= f.text_field :title, class: 'form-control' %>
-
-
-<%= f.label :description %>
-<%= f.text_field :description, class: 'form-control' %>
-
-<%= f.hidden_field :image, value: @item %>
-
-
-<%= f.submit "登録する", class: "btn btn-primary" %>
-<% end %>
+				<%= f.submit "登録する", class: "btn btn-primary" %>
+			<% end %>
+		</div>
+	</div>
+</div>

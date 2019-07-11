@@ -1,0 +1,24 @@
+<div class="container text-center dramas">
+  <h2>ドラマ一覧</h2>
+    <div class="row">
+     <% @dramas.each do |drama| %>
+        <div class="col-md-4">
+          <p><%= image_tag drama.image %></p>
+        </div>
+        <div class="col-md-8">
+          <h3><%= drama.title %></h3>
+          <p><%= drama.description %></p>
+          <% if drama.user.image.attached? %> 
+            <p><%= image_tag drama.user.image, class: "profile-image-drama" %> 紹介者<%= drama.user.name %>さん</p>
+            <% else %>
+            <p><%= gravatar_for drama.user, size: 50 %> 紹介者<%= drama.user.name %>さん</p>
+          <% end %>
+        </div>
+        <div class="col-12">
+          <hr style="background-color:#EB6964" >
+        </div>
+      <% end %>
+    </div>
+    <%= paginate @dramas %>
+</div>
+ 
