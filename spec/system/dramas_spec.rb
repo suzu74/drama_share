@@ -18,4 +18,11 @@ RSpec.feature 'Dramas', type: :system do
     expect(page).to have_content 'テスト'
   end
 
+  it 'ドラマを削除する' do
+    find('.navbar-toggler-icon').click 
+    click_on 'Account'
+    click_on 'プロフィール'
+    click_on '削除する'
+  end
+
 end
