@@ -8,6 +8,18 @@
         <div class="col-md-8">
           <h3><%= drama.title %></h3>
           <p><%= drama.description %></p>
+
+          <% if Like.find_by(user_id: current_user.id, drama_id: drama.id) %>
+        　  <%= link_to("/likes/#{drama.id}/destroy", {method: :post}) do %>
+            　<span class="fa fa-heart like-btn-unlike"></span>
+            <% end %>
+          <% else %>
+            <%= link_to("/likes/#{drama.id}/create", {method: :post}) do %>
+              <span class="fa fa-heart like-btn"></span>
+            <% end %>
+          <% end %>
+          <%= Like.where(drama_id: drama.id).count %>
+
           <% if drama.user.image.attached? %> 
             <p><%= image_tag drama.user.image, class: "profile-image-drama" %> 紹介者<%= drama.user.name %>さん</p>
             <% else %>

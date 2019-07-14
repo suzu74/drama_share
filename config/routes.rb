@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get    '/search',  to: 'dramas#search'
   get '/post',       to: "dramas#post"
   post '/post',      to: "dramas#create"
+  post "likes/:drama_id/create", to:"likes#create"
+  post "likes/:drama_id/destroy", to:"likes#destroy"
   resources :users
-  resources :dramas,   only: [:index, :create, :destroy]
+  resources :dramas, only: [:index, :create, :destroy]
 end

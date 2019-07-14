@@ -208,3 +208,17 @@ span.picture {
   border-radius: 50%;
 }
 
+/* likes */
+
+.dramas {
+  
+  a {
+    text-decoration: none;
+    .like-btn {
+    color: #8899a6;
+    }
+    .like-btn-unlike {
+    color: #ff2581;
+      }
+  }
+}
