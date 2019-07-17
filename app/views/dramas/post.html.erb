@@ -7,7 +7,7 @@
 				<p><%= image_tag @item %></p>
 
 				<%= f.label :title, "ドラマのタイトル" %>
-				<%= f.text_field :title, class: 'form-control' %>
+				<%= f.text_field :title, class: 'form-control', value: @title %>
 
 				<%= f.label :description, "おすすめポイント" %>
 				<%= f.text_area :description, class: 'form-control' %>

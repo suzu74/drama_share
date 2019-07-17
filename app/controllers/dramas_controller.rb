@@ -25,6 +25,7 @@ class DramasController < ApplicationController
   def search
     if params[:keyword]
       @items = RakutenWebService::Books::DVD.search(title: params[:keyword]).first(10)
+      @title = params[:keyword]
     else 
       render 'search'
     end
@@ -32,6 +33,7 @@ class DramasController < ApplicationController
 
   def post
     @item = params[:title]
+    @title = params[:keyword]
     @drama = Drama.new
   end
 

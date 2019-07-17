@@ -12,12 +12,11 @@
   			<% @items.each do |item| %>
   				<div class="col-xs-4 border">
   				  <h3><a href="<%= item['itemUrl'] %>"><img class="ig" src="<%= item['mediumImageUrl'] %>"></a></h3>
-
   				  <%= form_for(item['mediumImageUrl'], method: :get, url: post_path) do  %>
-  				      <%= hidden_field_tag :title, item['largeImageUrl'] %>
-  				      <%= submit_tag '選ぶ', class: "btn btn-secondary" %>
+				      <%= hidden_field_tag :title, item['largeImageUrl'] %> 
+              <%= hidden_field_tag :keyword, @title %> 
+				      <%= submit_tag '選ぶ', class: "btn btn-secondary" %>
   					<% end %>	
-
   				</div>
   			<% end %>
   			</div>
