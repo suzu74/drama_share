@@ -1,6 +1,6 @@
-<div class="col-xs-12 col-sm-4 border">
+<div class="col-xs-12 col-sm-4 border pt-4">
   <% if user.image.attached? %>
-    <%= image_tag user.image ,class: "profile-image pt-4" %>
+    <%= image_tag user.image ,class: "profile-image " %>
   <% else %>
     <%= gravatar_for user, size: 150 %>
   <% end %>
