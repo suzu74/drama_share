@@ -1,24 +1,13 @@
-# README
+# おすすめの韓国ドラマを紹介し合うサービス
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+現在、韓国語を勉強しているのですが、  
+そこの教室の受講生の方の間で「おすすめのドラマ」を共有できたらと思い作成したサービスになります。  
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Ruby on Railsをメインに用いてWebアプリケーションを作成しました。  
+トップ画面ではjQueryを用いたスクロールの実装。  
+外部APIの楽天APIや    
+Kaminariなどのgem、  
+Active strageを用いた画像投稿機能の実装を行いました。  
+テストではRSpecを用いて開発致しました。  
